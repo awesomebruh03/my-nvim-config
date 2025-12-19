@@ -6,6 +6,13 @@ local options = {
         go = { "gofumpt", "goimports-reviser", "golines" },
         -- haskell = { "fourmolu", "stylish-haskell" },
         python = { "isort", "black" },
+        -- web dev
+        svelte = { "prettier" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        json = { "prettier" },
     },
 
     formatters = {

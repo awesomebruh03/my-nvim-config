@@ -13,12 +13,18 @@ lspconfig.servers = {
     -- "hls",
     "ols",
     "pyright",
+    -- web dev
+    "svelte",
+    "tailwindcss",
+    "ts_ls",
 }
 
 -- list of servers configured with default config.
 local default_servers = {
     "ols",
     "pyright",
+    "tailwindcss",
+    "ts_ls",
 }
 
 -- lsps with default config
@@ -67,6 +73,7 @@ vim.lsp.config("gopls", { -- nvim 0.11
             completeUnimported = true,
             usePlaceholders = true,
             staticcheck = true,
+            log_filters = "verbose",
         },
     },
 })
@@ -108,4 +115,15 @@ vim.lsp.config("lua_ls", { -- nvim 0.11
             },
         },
     },
+})
+
+-- Svelte Config
+vim.lsp.config("svelte", {
+    on_attach = function(client, bufnr)
+        -- Disable internal formatting to let Prettier handle it
+        client.server_capabilities.documentFormattingProvider = false
+        on_attach(client, bufnr)
+    end,
+    on_init = on_init,
+    capabilities = capabilities,
 })
