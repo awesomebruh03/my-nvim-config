@@ -59,4 +59,15 @@ return {
             require("configs.mason-conform")
         end,
     },
+    {
+        "windwp/nvim-ts-autotag",
+        ft = { "html", "javascriptreact", "typescriptreact", "vue", "svelte" },
+        config = function()
+            require("nvim-ts-autotag").setup()
+        end,
+    },
+    {
+        "mfussenegger/nvim-jdtls",
+        ft = { "java" },
+    },
 }

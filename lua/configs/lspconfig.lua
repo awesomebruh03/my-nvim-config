@@ -17,6 +17,7 @@ lspconfig.servers = {
     "svelte",
     "tailwindcss",
     "ts_ls",
+    "lemminx",
 }
 
 -- list of servers configured with default config.
@@ -25,6 +26,7 @@ local default_servers = {
     "pyright",
     "tailwindcss",
     "ts_ls",
+    "lemminx",
 }
 
 -- lsps with default config

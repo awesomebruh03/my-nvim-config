@@ -13,6 +13,7 @@ local options = {
         html = { "prettier" },
         css = { "prettier" },
         json = { "prettier" },
+        java = { "google-java-format" },
     },
 
     formatters = {
@@ -63,6 +64,9 @@ local options = {
                 "--profile",
                 "black",
             },
+        },
+        ["google-java-format"] = {
+            prepend_args = { "--aosp" },
         },
     },
 

@@ -22,6 +22,13 @@ local options = {
         "vim",
         "vimdoc",
         "yaml",
+        --web dev
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "svelte",
+        "java",
     },
 
     highlight = {
@@ -30,6 +37,7 @@ local options = {
     },
 
     indent = { enable = true },
+    autotag = { enable = true },
 }
 
 require("nvim-treesitter.configs").setup(options)
